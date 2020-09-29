@@ -7,18 +7,27 @@
     "@material-ui/core": "^4.4.0",
     "@material-ui/icons": "^4.2.1",
     "agora-rtc-sdk": "^3.0.2",
+    "bootstrap": "^4.5.2",
     "clsx": "^1.0.4",
+    "concurrently": "^5.1.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "lodash-es": "^4.17.15",
+    "lodash.throttle": "^4.1.1",
+    "node-fetch": "^2.6.1",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-copy-to-clipboard": "^5.0.2",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.1.1",
-    "symbl-chime-adapter": "^1.0.1"
+    "symbl-chime-adapter": "^1.0.9"
   },
   "scripts": {
+    "start": "concurrently npm:server npm:dev",
     "dev": "react-scripts start",
     "build": "react-scripts build",
+    "server": "node server.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

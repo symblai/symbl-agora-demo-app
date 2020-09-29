@@ -26,7 +26,12 @@ html, body {
     transform: rotate(360deg);
   }
 }
-
+.si-logo::before {
+    padding-top: 8px;
+    padding-left: 7px;
+    font-size: 33px;
+    color: white;
+}
 .github {
   cursor: pointer;
   background-repeat: no-repeat;
@@ -119,11 +124,12 @@ html, body {
 }
 .meeting {
   display: flex;
-  flex: 1;
+  width:100%;
+  /* flex: 1; */
 }
 .current-view {
   display: flex;
-  flex: 1;
+  /* flex: 1; */
   justify-content: center;
   align-items: center;
   position: relative;
@@ -131,6 +137,7 @@ html, body {
   background-position: center;
   background-color: #666;
   background-size: 280px;
+  width: 85%;
 }
 .stream-player {
   display: flex;

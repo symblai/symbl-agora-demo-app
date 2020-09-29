@@ -152,6 +152,26 @@ export default function IndexCard () {
             }}
           />
         </FormControl>
+        <FormControl className={clsx(classes.input, classes.grid)}>
+            <InputLabel htmlFor="userName">User Name</InputLabel>
+            <Input
+                id="userName"
+                name="userName"
+                value={stateCtx.config.userName}
+                required={true}
+                onChange={evt => {
+                    const PATTERN = /^[a-zA-Z0-9!#$%&()+\-:;<=.>?@[\]^_{}|~,\s]{1,64}$/;
+                    const value = PATTERN.test(evt.target.value);
+                    if (value && evt.target.value.length < 64) {
+                        mutationCtx.updateConfig({
+                            userName: evt.target.value
+                        });
+                    } else {
+                        mutationCtx.updateConfig({ userName: "" });
+                    }
+                }}
+            />
+        </FormControl>
         <FormControl className={classes.grid}>
           <Button onClick={handleClick} variant="contained" color="primary" className={classes.button}>
             Join

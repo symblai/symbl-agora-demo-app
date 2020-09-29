@@ -1,0 +1,52 @@
+{
+  "name": "symbl",
+  "css_prefix_text": "si-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "8d4108e76c194b7d722e426e2036c00a",
+      "css": "logo",
+      "code": 59393,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M39.9 138.3L618.2 569.6 332.4 1000 39.9 138.3ZM353.6 0L618.2 570.4 0 862.5 353.6 0Z",
+        "width": 628
+      },
+      "search": [
+        "symbl-logo"
+      ]
+    },
+    {
+      "uid": "8a91c1d4fa52e8ea0d3acd6d1e99794e",
+      "css": "logo-p2",
+      "code": 59395,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M353.6 0L618.2 570.4 0 862.5 353.6 0Z",
+        "width": 628
+      },
+      "search": [
+        "symbl-logo-.2"
+      ]
+    },
+    {
+      "uid": "12ef192f4e292cfc0384df44042b8cef",
+      "css": "logo-p1",
+      "code": 59392,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M39.9 138.3L618.2 569.6 332.4 1000 39.9 138.3Z",
+        "width": 628
+      },
+      "search": [
+        "symbl-logo-.1"
+      ]
+    }
+  ]
+}

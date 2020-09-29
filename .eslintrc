@@ -1,10 +1,13 @@
 {
-  "extends": ["standard", "react-app"],
+  "extends": ["eslint:recommended", "react-app"],
   "plugins": ["prettier"],
   "parser": "babel-eslint",
   "overrides": [
     {
       "files": ["**/*.js?(x)", "src/App.jsx"]
     }
-  ]
+  ],
+  "rules": {
+      "indent": ["warn", 4]
+      }
 }
