@@ -45,17 +45,9 @@ To build and run the sample application, get an App ID:
     # install dependencies
     npm install
     ```
-2. Start the application by entering the `run dev` or `run build` command.
-    The `run dev` command is for development purposes.
-    ``` bash
-    # serve with hot reload at localhost:8080
-    npm run dev
-    ```
-    The `run build` command is for production purposes and minifies code.
-    ``` bash
-    # build for production with minification
-    npm run build
-    ```
+2. Start the application by entering the `npm start` command. 
+   * Symbl Access Token server is started on port 8081
+   * Agora application is started on port 3000
 3. Your default browser should open and display the sample application.
     **Note:** In some cases, you may need to open a browser and enter `http://localhost:8080` as the URL.
 
