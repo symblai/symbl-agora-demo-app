@@ -28,14 +28,13 @@ To build and run the sample application, get an App ID:
 4. Generate a temp **Access Token** (valid for 24 hours) from dashboard page with given channel name, save for later use.
 
 ### Add your Symbl App Id + Secret and Agora App Id to the  `.env` file
-
-    ```bash
-    REACT_APP_AGORA_APP_ID=<#YOUR Agora.io APP ID#>
-    REACT_APP_AGORA_LOG=true
-    SYMBL_API_BASE_PATH="https://api.symbl.ai"
-    SYMBL_APP_ID=<#Your Symbl.ai App Id>
-    SYMBL_APP_SECRET=<#Your Symbl.ai App Secret>
-    ```
+```
+REACT_APP_AGORA_APP_ID=<#YOUR Agora.io APP ID#>
+REACT_APP_AGORA_LOG=true
+SYMBL_API_BASE_PATH="https://api.symbl.ai"
+SYMBL_APP_ID=<#Your Symbl.ai App Id>
+SYMBL_APP_SECRET=<#Your Symbl.ai App Secret>
+```
 
 ### Install dependencies and integrate the Agora Video SDK
 
