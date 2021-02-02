@@ -1,21 +1,20 @@
 # Symbl Agora Demo App
 
-============================
-[![Websocket](https://img.shields.io/badge/symbl-websocket-brightgreen)](https://docs.symbl.ai/docs/streamingapi/overview/introduction)
-<hr />
-    <img src="https://developer.symbl.ai/assets/images/Symbl.svg" height="48px" alt="Symbl is Conversational AI />
-<hr /> 
 
-============================
+[![Websocket](https://img.shields.io/badge/symbl-websocket-brightgreen)](https://docs.symbl.ai/docs/streamingapi/overview/introduction)
 
 Symbl's APIs empower developers to enable: 
 - **Real-time** analysis of free-flowing discussions to automatically surface highly relevant summary discussion topics, contextual insights, suggestive action items, follow-ups, decisions, and questions.\
 - **Voice APIs** that makes it easy to add AI-powered conversational intelligence to either [telephony][telephony] or [WebSocket][websocket] interfaces.
 - **Conversation APIs** that provide a REST interface for managing and processing your conversation data.
 - **Summary UI** with a fully customizable and editable reference experience that indexes a searchable transcript and shows generated actionable insights, topics, timecodes, and speaker information.
+
 <hr />
-Enable Symbl for Agora Video Calls
+
+## Enable Symbl for Agora Video Calls
+
 <hr />
+
  * [Introduction](#introduction)
  * [Pre-requisites](#pre-requisites)
  * [Setup and Deploy](#setupanddeploy)
@@ -64,7 +63,8 @@ Run the follwing npm commands:
 Enter your Room Name and User Name in the app portal and join the meeting.
     **Note**  If you are using a high-security Agora project, Room Name must match the Agora Channel Name used to generate the token
 
-![pic](/src/assets/Agora-Channel-Name.PNG)
+![pic](./src/assets/Agora-Channel-Name.PNG =50x50)
+<img src="./src/assets/Agora-Channel-Name.PNG" width="50">
 
 To test adding multiple meeting participants you can open additional instances of localhost:3000.
 
