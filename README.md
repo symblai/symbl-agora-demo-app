@@ -1,62 +1,110 @@
-# Symbl + Agora Example Application
+# Symbl Agora Demo App
 
-This tutorial shows you how to quickly create a live app using the Symbl Websocket adapter with Agora Web SDK.
 
-## Prerequisites
+[![Websocket](https://img.shields.io/badge/symbl-websocket-brightgreen)](https://docs.symbl.ai/docs/streamingapi/overview/introduction)
 
-- Node.js LTS
-- Agora Account
-- Symbl App ID and Secret
+Symbl's APIs empower developers to enable: 
+- **Real-time** analysis of free-flowing discussions to automatically surface highly relevant summary discussion topics, contextual insights, suggestive action items, follow-ups, decisions, and questions.\
+- **Voice APIs** that makes it easy to add AI-powered conversational intelligence to either [telephony][telephony] or [WebSocket][websocket] interfaces.
+- **Conversation APIs** that provide a REST interface for managing and processing your conversation data.
+- **Summary UI** with a fully customizable and editable reference experience that indexes a searchable transcript and shows generated actionable insights, topics, timecodes, and speaker information.
 
-## Quick Start
+<hr />
 
-This section shows you how to prepare, build, and run the sample application. 
+## Enable Symbl for Agora Video Calls
 
-### Obtain Symbl App ID and Secret and Agora App ID
+<hr />
 
-To use the Agora example application with Symbl, you'll need to:
-1. Create an account. You can signup at [platform.symbl.ai/#/signup](https://platform.symbl.ai/#/signup). 
-2. Head to the [dashboard](https://platform.symbl.ai/#/home)
-3. Save your App Id and Secret 
+ * [Introduction](#introduction)
+ * [Pre-requisites](#pre-requisites)
+ * [Setup and Deploy](#setupanddeploy)
+ * [Dependencies](#dependencies)
+ * [Community](#community)
 
-### Obtain an Agora App ID
+## Introduction
 
-To build and run the sample application, get an App ID:
-1. Create a developer account at [agora.io](https://dashboard.agora.io/signin/). Once you finish the signup process, you will be redirected to the Dashboard.
-2. Navigate in the Dashboard tree on the left to **Projects** > **Project List**.
-3. Save the **App ID** from the Dashboard for later use.
-4. Generate a temp **Access Token** (valid for 24 hours) from dashboard page with given channel name, save for later use.
+This sample implementation shows you how to quickly create a live app using the Symbl Websocket adapter with Agora Web SDK.
 
-### Add your Symbl App Id + Secret and Agora App Id to the  `.env` file
+### Pre-requisites
+
+* JS ES6+
+* Node.js
+* npm (or your favorite package manager)
+* Agora Account [Agora](https://sso.agora.io/en/v3/signup)
+
+## Setup and Deploy
+The first step to getting setup is to [sign up][signup]. 
+
+Update the .env file with the following:
+1. SYMBL_APP_ID = your Symbl App ID that you can get from [Platform](https://platform.symbl.ai)
+2. SYMBL_APP_SECRET = your Symbl App Secret that you can get from [Platform](https://platform.symbl.ai)
+3. REACT_APP_AGORA_APP_ID = App ID for your Agora Project
+4. (Optional) If you are implementing a high-security Agora Project you will also need to include an app token.  Low-security Projects only require an App Id.  More on [Agora Authorization](https://docs.agora.io/en/Agora%20Platform/token).  Uncomment line 4 in the .env and update REACT_APP_AGORA_TOKEN = your Agora Project token
+
 ```
-REACT_APP_AGORA_APP_ID=<#YOUR Agora.io APP ID#>
+REACT_APP_AGORA_APP_ID=<your-agora-app_id>
+
+# Uncomment line below if using an Agora Project with high security
+# REACT_APP_AGORA_TOKEN=<your-agora-token> 
+
 REACT_APP_AGORA_LOG=true
 SYMBL_API_BASE_PATH="https://api.symbl.ai"
-SYMBL_APP_ID=<#Your Symbl.ai App Id>
-SYMBL_APP_SECRET=<#Your Symbl.ai App Secret>
+SYMBL_APP_ID=<symbl-app-id>
+SYMBL_APP_SECRET=<symbl-app-secret> 
 ```
 
-### Install dependencies and integrate the Agora Video SDK
+Run the follwing npm commands:
+1. `npm install` to download all the node modules
+2. `npm start` to start the application
+    * Symbl Access Token server is started on port 8081
+    * Agora application is started on port 3000
+    * Your default browser should open and display the sample application.  If it does not open automatically open your browser to `http://localhost:3000`.
 
+Enter your Room Name and User Name in the app portal and join the meeting.
+    **Note**  If you are using a high-security Agora project, Room Name must match the Agora Channel Name used to generate the token
 
-1. Using the Terminal app, enter the `install` command in your project directory. This command installs libraries that are required to run the sample application.
-    ``` bash
-    # install dependencies
-    npm install
-    ```
-2. Start the application by entering the `npm start` command. 
-   * Symbl Access Token server is started on port 8081
-   * Agora application is started on port 3000
-3. Your default browser should open and display the sample application.
-    **Note:** In some cases, you may need to open a browser and enter `http://localhost:8080` as the URL.
+![pic](./src/assets/Agora-Channel-Name.PNG =50x50)
+<img src="./src/assets/Agora-Channel-Name.PNG" width="50">
 
+To test adding multiple meeting participants you can open additional instances of localhost:3000.
 
-## Contact Us
+## Dependencies
 
-- You can find Symbl's full API documentation at [Document Center](https://docs.symbl.ai)
-- For potential issues with agora, take a look at our [FAQ](https://docs.agora.io/en/faq) first
-- If you encounter problems during integration, you can ask questions in our [Slack Developer Community](https://symbldotai.slack.com/join/shared_invite/zt-4sic2s11-D3x496pll8UHSJ89cm78CA#/) 
+```json
+  "dependencies": {
+    "@material-ui/core": "^4.4.0",
+    "@material-ui/icons": "^4.2.1",
+    "agora-rtc-sdk": "^3.0.2",
+    "bootstrap": "^4.5.2",
+    "clsx": "^1.0.4",
+    "concurrently": "^5.1.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "lodash-es": "^4.17.15",
+    "lodash.throttle": "^4.1.1",
+    "node-fetch": "^2.6.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-copy-to-clipboard": "^5.0.2",
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.1.1",
+    "symbl-chime-adapter": "^1.0.9"
+  }
+```
 
-## License
+## Community
 
-The MIT License (MIT)
+If you have any questions, feel free to reach out to us at devrelations@symbl.ai or thorugh our Community Slack at https://developer.symbl.ai/community/slack [developer community][developer_community]
+
+This guide is actively developed, and we love to hear from you! Please feel free to [create an issue][issues] or [open a pull request][pulls] with your questions, comments, suggestions and feedback.  If you liked our integration guide, please star our repo!
+
+This library is released under the [MIT License][license]
+
+[license]: LICENSE.txt
+[telephony]: https://docs.symbl.ai/docs/telephony/overview/post-api
+[websocket]: https://docs.symbl.ai/docs/streamingapi/overview/introduction
+[developer_community]: https://community.symbl.ai/?_ga=2.134156042.526040298.1609788827-1505817196.1609788827
+[signup]: https://platform.symbl.ai/?_ga=2.63499307.526040298.1609788827-1505817196.1609788827
+[issues]: https://github.com/symblai/symbl-for-zoom/issues
+[pulls]: https://github.com/symblai/symbl-for-zoom/pulls

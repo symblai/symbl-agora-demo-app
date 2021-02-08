@@ -11,6 +11,7 @@ import { useParams } from "react-router-dom";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { Symbl } from "symbl-chime-adapter";
 import symblFont from '../assets/symbl-font/css/symbl.css';
+require("dotenv").config();
 
 
 var symbl;
@@ -99,7 +100,7 @@ const MeetingPage = () => {
 
     const config = useMemo(() => {
         return {
-            token: null,
+            token: process.env.REACT_APP_AGORA_TOKEN,
             channel: channelName,
             userName: stateCtx.config.userName,
             microphoneId: stateCtx.config.microphoneId,
