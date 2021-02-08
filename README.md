@@ -4,7 +4,7 @@
 [![Websocket](https://img.shields.io/badge/symbl-websocket-brightgreen)](https://docs.symbl.ai/docs/streamingapi/overview/introduction)
 
 Symbl's APIs empower developers to enable: 
-- **Real-time** analysis of free-flowing discussions to automatically surface highly relevant summary discussion topics, contextual insights, suggestive action items, follow-ups, decisions, and questions.\
+- **Real-time** analysis of free-flowing discussions to automatically surface highly relevant summary discussion topics, contextual insights, suggestive action items, follow-ups, decisions, and questions
 - **Voice APIs** that makes it easy to add AI-powered conversational intelligence to either [telephony][telephony] or [WebSocket][websocket] interfaces.
 - **Conversation APIs** that provide a REST interface for managing and processing your conversation data.
 - **Summary UI** with a fully customizable and editable reference experience that indexes a searchable transcript and shows generated actionable insights, topics, timecodes, and speaker information.
@@ -61,10 +61,9 @@ Run the follwing npm commands:
     * Your default browser should open and display the sample application.  If it does not open automatically open your browser to `http://localhost:3000`.
 
 Enter your Room Name and User Name in the app portal and join the meeting.
-    **Note**  If you are using a high-security Agora project, Room Name must match the Agora Channel Name used to generate the token
+**Note**  If you are using a high-security Agora project, Room Name must match the Agora Channel Name used to generate the token
 
-![pic](./src/assets/Agora-Channel-Name.PNG =50x50)
-<img src="./src/assets/Agora-Channel-Name.PNG" width="50">
+<img src="./src/assets/Agora-Channel-Name.PNG" height="50%" width="50%">
 
 To test adding multiple meeting participants you can open additional instances of localhost:3000.
 
@@ -95,7 +94,7 @@ To test adding multiple meeting participants you can open additional instances o
 
 ## Community
 
-If you have any questions, feel free to reach out to us at devrelations@symbl.ai or thorugh our Community Slack at https://developer.symbl.ai/community/slack [developer community][developer_community]
+If you have any questions, feel free to reach out to us at devrelations@symbl.ai, thorugh our Community [Slack][slack], or [developer community][developer_community]
 
 This guide is actively developed, and we love to hear from you! Please feel free to [create an issue][issues] or [open a pull request][pulls] with your questions, comments, suggestions and feedback.  If you liked our integration guide, please star our repo!
 
@@ -108,3 +107,4 @@ This library is released under the [MIT License][license]
 [signup]: https://platform.symbl.ai/?_ga=2.63499307.526040298.1609788827-1505817196.1609788827
 [issues]: https://github.com/symblai/symbl-for-zoom/issues
 [pulls]: https://github.com/symblai/symbl-for-zoom/pulls
+[slack]: https://join.slack.com/t/symbldotai/shared_invite/zt-4sic2s11-D3x496pll8UHSJ89cm78CA
