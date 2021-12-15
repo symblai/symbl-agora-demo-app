@@ -63,8 +63,7 @@ Run the follwing npm commands:
 Enter your Room Name and User Name in the app portal and join the meeting.
     **Note**  If you are using a high-security Agora project, Room Name must match the Agora Channel Name used to generate the token
 
-![pic](./src/assets/Agora-Channel-Name.PNG =50x50)
-<img src="./src/assets/Agora-Channel-Name.PNG" width="50">
+![pic](./src/assets/Agora-Channel-Name.png)
 
 To test adding multiple meeting participants you can open additional instances of localhost:3000.
 
